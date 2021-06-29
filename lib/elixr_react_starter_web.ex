@@ -1,12 +1,12 @@
-defmodule ElixrReactStarterWeb do
+defmodule PhoenixReactStarterWeb do
   @moduledoc """
   The entrypoint for defining your web interface, such
   as controllers, views, channels and so on.
 
   This can be used in your application as:
 
-      use ElixrReactStarterWeb, :controller
-      use ElixrReactStarterWeb, :view
+      use PhoenixReactStarterWeb, :controller
+      use PhoenixReactStarterWeb, :view
 
   The definitions below will be executed for every view,
   controller, etc, so keep them short and clean, focused
@@ -19,19 +19,19 @@ defmodule ElixrReactStarterWeb do
 
   def controller do
     quote do
-      use Phoenix.Controller, namespace: ElixrReactStarterWeb
+      use Phoenix.Controller, namespace: PhoenixReactStarterWeb
 
       import Plug.Conn
-      import ElixrReactStarterWeb.Gettext
-      alias ElixrReactStarterWeb.Router.Helpers, as: Routes
+      import PhoenixReactStarterWeb.Gettext
+      alias PhoenixReactStarterWeb.Router.Helpers, as: Routes
     end
   end
 
   def view do
     quote do
       use Phoenix.View,
-        root: "lib/elixr_react_starter_web/templates",
-        namespace: ElixrReactStarterWeb
+        root: "lib/phoenix_react_starter_web/templates",
+        namespace: PhoenixReactStarterWeb
 
       # Import convenience functions from controllers
       import Phoenix.Controller,
@@ -54,7 +54,7 @@ defmodule ElixrReactStarterWeb do
   def channel do
     quote do
       use Phoenix.Channel
-      import ElixrReactStarterWeb.Gettext
+      import PhoenixReactStarterWeb.Gettext
     end
   end
 
@@ -66,9 +66,9 @@ defmodule ElixrReactStarterWeb do
       # Import basic rendering functionality (render, render_layout, etc)
       import Phoenix.View
 
-      import ElixrReactStarterWeb.ErrorHelpers
-      import ElixrReactStarterWeb.Gettext
-      alias ElixrReactStarterWeb.Router.Helpers, as: Routes
+      import PhoenixReactStarterWeb.ErrorHelpers
+      import PhoenixReactStarterWeb.Gettext
+      alias PhoenixReactStarterWeb.Router.Helpers, as: Routes
     end
   end
 

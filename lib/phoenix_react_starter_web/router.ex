@@ -1,5 +1,5 @@
-defmodule ElixrReactStarterWeb.Router do
-  use ElixrReactStarterWeb, :router
+defmodule PhoenixReactStarterWeb.Router do
+  use PhoenixReactStarterWeb, :router
 
   pipeline :browser do
     plug :accepts, ["html"]
@@ -13,7 +13,7 @@ defmodule ElixrReactStarterWeb.Router do
     plug :accepts, ["json"]
   end
 
-  scope "/api", ElixrReactStarterWeb do
+  scope "/api", PhoenixReactStarterWeb do
     pipe_through :api
   end
 
@@ -29,11 +29,11 @@ defmodule ElixrReactStarterWeb.Router do
 
     scope "/" do
       pipe_through :browser
-      live_dashboard "/dashboard", metrics: ElixrReactStarterWeb.Telemetry
+      live_dashboard "/dashboard", metrics: PhoenixReactStarterWeb.Telemetry
     end
   end
 
-  scope "/", ElixrReactStarterWeb do
+  scope "/", PhoenixReactStarterWeb do
     pipe_through :browser
 
     get "/*path", PageController, :index

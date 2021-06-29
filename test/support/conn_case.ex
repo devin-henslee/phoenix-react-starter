@@ -1,4 +1,4 @@
-defmodule ElixrReactStarterWeb.ConnCase do
+defmodule PhoenixReactStarterWeb.ConnCase do
   @moduledoc """
   This module defines the test case to be used by
   tests that require setting up a connection.
@@ -11,7 +11,7 @@ defmodule ElixrReactStarterWeb.ConnCase do
   we enable the SQL sandbox, so changes done to the database
   are reverted at the end of every test. If you are using
   PostgreSQL, you can even run database tests asynchronously
-  by setting `use ElixrReactStarterWeb.ConnCase, async: true`, although
+  by setting `use PhoenixReactStarterWeb.ConnCase, async: true`, although
   this option is not recommended for other databases.
   """
 
@@ -22,20 +22,20 @@ defmodule ElixrReactStarterWeb.ConnCase do
       # Import conveniences for testing with connections
       import Plug.Conn
       import Phoenix.ConnTest
-      import ElixrReactStarterWeb.ConnCase
+      import PhoenixReactStarterWeb.ConnCase
 
-      alias ElixrReactStarterWeb.Router.Helpers, as: Routes
+      alias PhoenixReactStarterWeb.Router.Helpers, as: Routes
 
       # The default endpoint for testing
-      @endpoint ElixrReactStarterWeb.Endpoint
+      @endpoint PhoenixReactStarterWeb.Endpoint
     end
   end
 
   setup tags do
-    :ok = Ecto.Adapters.SQL.Sandbox.checkout(ElixrReactStarter.Repo)
+    :ok = Ecto.Adapters.SQL.Sandbox.checkout(PhoenixReactStarter.Repo)
 
     unless tags[:async] do
-      Ecto.Adapters.SQL.Sandbox.mode(ElixrReactStarter.Repo, {:shared, self()})
+      Ecto.Adapters.SQL.Sandbox.mode(PhoenixReactStarter.Repo, {:shared, self()})
     end
 
     {:ok, conn: Phoenix.ConnTest.build_conn()}

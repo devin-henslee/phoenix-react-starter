@@ -1,4 +1,4 @@
-defmodule ElixrReactStarterWeb.ChannelCase do
+defmodule PhoenixReactStarterWeb.ChannelCase do
   @moduledoc """
   This module defines the test case to be used by
   channel tests.
@@ -11,7 +11,7 @@ defmodule ElixrReactStarterWeb.ChannelCase do
   we enable the SQL sandbox, so changes done to the database
   are reverted at the end of every test. If you are using
   PostgreSQL, you can even run database tests asynchronously
-  by setting `use ElixrReactStarterWeb.ChannelCase, async: true`, although
+  by setting `use PhoenixReactStarterWeb.ChannelCase, async: true`, although
   this option is not recommended for other databases.
   """
 
@@ -21,18 +21,18 @@ defmodule ElixrReactStarterWeb.ChannelCase do
     quote do
       # Import conveniences for testing with channels
       import Phoenix.ChannelTest
-      import ElixrReactStarterWeb.ChannelCase
+      import PhoenixReactStarterWeb.ChannelCase
 
       # The default endpoint for testing
-      @endpoint ElixrReactStarterWeb.Endpoint
+      @endpoint PhoenixReactStarterWeb.Endpoint
     end
   end
 
   setup tags do
-    :ok = Ecto.Adapters.SQL.Sandbox.checkout(ElixrReactStarter.Repo)
+    :ok = Ecto.Adapters.SQL.Sandbox.checkout(PhoenixReactStarter.Repo)
 
     unless tags[:async] do
-      Ecto.Adapters.SQL.Sandbox.mode(ElixrReactStarter.Repo, {:shared, self()})
+      Ecto.Adapters.SQL.Sandbox.mode(PhoenixReactStarter.Repo, {:shared, self()})
     end
 
     :ok

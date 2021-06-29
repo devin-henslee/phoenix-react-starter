@@ -1,3 +1,3 @@
-defmodule ElixrReactStarterWeb.PageViewTest do
-  use ElixrReactStarterWeb.ConnCase, async: true
+defmodule PhoenixReactStarterWeb.PageViewTest do
+  use PhoenixReactStarterWeb.ConnCase, async: true
 end

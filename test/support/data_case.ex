@@ -1,4 +1,4 @@
-defmodule ElixrReactStarter.DataCase do
+defmodule PhoenixReactStarter.DataCase do
   @moduledoc """
   This module defines the setup for tests requiring
   access to the application's data layer.
@@ -10,7 +10,7 @@ defmodule ElixrReactStarter.DataCase do
   we enable the SQL sandbox, so changes done to the database
   are reverted at the end of every test. If you are using
   PostgreSQL, you can even run database tests asynchronously
-  by setting `use ElixrReactStarter.DataCase, async: true`, although
+  by setting `use PhoenixReactStarter.DataCase, async: true`, although
   this option is not recommended for other databases.
   """
 
@@ -18,20 +18,20 @@ defmodule ElixrReactStarter.DataCase do
 
   using do
     quote do
-      alias ElixrReactStarter.Repo
+      alias PhoenixReactStarter.Repo
 
       import Ecto
       import Ecto.Changeset
       import Ecto.Query
-      import ElixrReactStarter.DataCase
+      import PhoenixReactStarter.DataCase
     end
   end
 
   setup tags do
-    :ok = Ecto.Adapters.SQL.Sandbox.checkout(ElixrReactStarter.Repo)
+    :ok = Ecto.Adapters.SQL.Sandbox.checkout(PhoenixReactStarter.Repo)
 
     unless tags[:async] do
-      Ecto.Adapters.SQL.Sandbox.mode(ElixrReactStarter.Repo, {:shared, self()})
+      Ecto.Adapters.SQL.Sandbox.mode(PhoenixReactStarter.Repo, {:shared, self()})
     end
 
     :ok

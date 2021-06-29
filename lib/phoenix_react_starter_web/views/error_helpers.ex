@@ -1,4 +1,4 @@
-defmodule ElixrReactStarterWeb.ErrorHelpers do
+defmodule PhoenixReactStarterWeb.ErrorHelpers do
   @moduledoc """
   Conveniences for translating and building error messages.
   """
@@ -39,9 +39,9 @@ defmodule ElixrReactStarterWeb.ErrorHelpers do
     # should be written to the errors.po file. The :count option is
     # set by Ecto and indicates we should also apply plural rules.
     if count = opts[:count] do
-      Gettext.dngettext(ElixrReactStarterWeb.Gettext, "errors", msg, msg, count, opts)
+      Gettext.dngettext(PhoenixReactStarterWeb.Gettext, "errors", msg, msg, count, opts)
     else
-      Gettext.dgettext(ElixrReactStarterWeb.Gettext, "errors", msg, opts)
+      Gettext.dgettext(PhoenixReactStarterWeb.Gettext, "errors", msg, opts)
     end
   end
 end

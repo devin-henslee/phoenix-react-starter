@@ -1,5 +1,5 @@
-defmodule ElixrReactStarterWeb.ErrorView do
-  use ElixrReactStarterWeb, :view
+defmodule PhoenixReactStarterWeb.ErrorView do
+  use PhoenixReactStarterWeb, :view
 
   # If you want to customize a particular status code
   # for a certain format, you may uncomment below.

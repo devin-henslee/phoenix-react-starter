@@ -7,15 +7,15 @@
 # General application configuration
 use Mix.Config
 
-config :elixr_react_starter,
-  ecto_repos: [ElixrReactStarter.Repo]
+config :phoenix_react_starter,
+  ecto_repos: [PhoenixReactStarter.Repo]
 
 # Configures the endpoint
-config :elixr_react_starter, ElixrReactStarterWeb.Endpoint,
+config :phoenix_react_starter, PhoenixReactStarterWeb.Endpoint,
   url: [host: "localhost"],
   secret_key_base: "TVi4fYnY06waz173gFaDCJxr8DwgUtfsNkDT3zhLr4oK3l5g83DjFyQg7DJXrK3e",
-  render_errors: [view: ElixrReactStarterWeb.ErrorView, accepts: ~w(html json), layout: false],
-  pubsub_server: ElixrReactStarter.PubSub,
+  render_errors: [view: PhoenixReactStarterWeb.ErrorView, accepts: ~w(html json), layout: false],
+  pubsub_server: PhoenixReactStarter.PubSub,
   live_view: [signing_salt: "3wePxrug"]
 
 # Configures Elixir's Logger

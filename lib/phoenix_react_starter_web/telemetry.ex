@@ -1,4 +1,4 @@
-defmodule ElixrReactStarterWeb.Telemetry do
+defmodule PhoenixReactStarterWeb.Telemetry do
   use Supervisor
   import Telemetry.Metrics
 
@@ -31,11 +31,11 @@ defmodule ElixrReactStarterWeb.Telemetry do
       ),
 
       # Database Metrics
-      summary("elixr_react_starter.repo.query.total_time", unit: {:native, :millisecond}),
-      summary("elixr_react_starter.repo.query.decode_time", unit: {:native, :millisecond}),
-      summary("elixr_react_starter.repo.query.query_time", unit: {:native, :millisecond}),
-      summary("elixr_react_starter.repo.query.queue_time", unit: {:native, :millisecond}),
-      summary("elixr_react_starter.repo.query.idle_time", unit: {:native, :millisecond}),
+      summary("phoenix_react_starter.repo.query.total_time", unit: {:native, :millisecond}),
+      summary("phoenix_react_starter.repo.query.decode_time", unit: {:native, :millisecond}),
+      summary("phoenix_react_starter.repo.query.query_time", unit: {:native, :millisecond}),
+      summary("phoenix_react_starter.repo.query.queue_time", unit: {:native, :millisecond}),
+      summary("phoenix_react_starter.repo.query.idle_time", unit: {:native, :millisecond}),
 
       # VM Metrics
       summary("vm.memory.total", unit: {:byte, :kilobyte}),
@@ -49,7 +49,7 @@ defmodule ElixrReactStarterWeb.Telemetry do
     [
       # A module, function and arguments to be invoked periodically.
       # This function must call :telemetry.execute/3 and a metric must be added above.
-      # {ElixrReactStarterWeb, :count_users, []}
+      # {PhoenixReactStarterWeb, :count_users, []}
     ]
   end
 end

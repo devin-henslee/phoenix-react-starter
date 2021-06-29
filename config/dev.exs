@@ -1,10 +1,10 @@
 use Mix.Config
 
 # Configure your database
-config :elixr_react_starter, ElixrReactStarter.Repo,
+config :phoenix_react_starter, PhoenixReactStarter.Repo,
   username: "postgres",
   password: "postgres",
-  database: "elixr_react_starter_dev",
+  database: "phoenix_react_starter_dev",
   hostname: "localhost",
   show_sensitive_data_on_connection_error: true,
   pool_size: 10
@@ -15,7 +15,7 @@ config :elixr_react_starter, ElixrReactStarter.Repo,
 # The watchers configuration can be used to run external
 # watchers to your application. For example, we use it
 # with webpack to recompile .js and .css sources.
-config :elixr_react_starter, ElixrReactStarterWeb.Endpoint,
+config :phoenix_react_starter, PhoenixReactStarterWeb.Endpoint,
   http: [port: 4000],
   debug_errors: true,
   code_reloader: true,
@@ -54,13 +54,13 @@ config :elixr_react_starter, ElixrReactStarterWeb.Endpoint,
 # different ports.
 
 # Watch static and templates for browser reloading.
-config :elixr_react_starter, ElixrReactStarterWeb.Endpoint,
+config :phoenix_react_starter, PhoenixReactStarterWeb.Endpoint,
   live_reload: [
     patterns: [
       ~r"priv/static/.*(js|css|png|jpeg|jpg|gif|svg)$",
       ~r"priv/gettext/.*(po)$",
-      ~r"lib/elixr_react_starter_web/(live|views)/.*(ex)$",
-      ~r"lib/elixr_react_starter_web/templates/.*(eex)$"
+      ~r"lib/phoenix_react_starter_web/(live|views)/.*(ex)$",
+      ~r"lib/phoenix_react_starter_web/templates/.*(eex)$"
     ]
   ]
 

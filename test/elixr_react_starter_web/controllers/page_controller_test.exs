@@ -1,5 +1,5 @@
-defmodule ElixrReactStarterWeb.PageControllerTest do
-  use ElixrReactStarterWeb.ConnCase
+defmodule PhoenixReactStarterWeb.PageControllerTest do
+  use PhoenixReactStarterWeb.ConnCase
 
   test "GET /", %{conn: conn} do
     conn = get(conn, "/")

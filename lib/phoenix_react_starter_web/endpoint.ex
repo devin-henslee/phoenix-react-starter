@@ -1,16 +1,16 @@
-defmodule ElixrReactStarterWeb.Endpoint do
-  use Phoenix.Endpoint, otp_app: :elixr_react_starter
+defmodule PhoenixReactStarterWeb.Endpoint do
+  use Phoenix.Endpoint, otp_app: :phoenix_react_starter
 
   # The session will be stored in the cookie and signed,
   # this means its contents can be read but not tampered with.
   # Set :encryption_salt if you would also like to encrypt it.
   @session_options [
     store: :cookie,
-    key: "_elixr_react_starter_key",
+    key: "_phoenix_react_starter_key",
     signing_salt: "oAjn7WzN"
   ]
 
-  socket "/socket", ElixrReactStarterWeb.UserSocket,
+  socket "/socket", PhoenixReactStarterWeb.UserSocket,
     websocket: true,
     longpoll: false
 
@@ -22,7 +22,7 @@ defmodule ElixrReactStarterWeb.Endpoint do
   # when deploying your static files in production.
   plug Plug.Static,
     at: "/",
-    from: :elixr_react_starter,
+    from: :phoenix_react_starter,
     gzip: false,
     only: ~w(css fonts images js favicon.ico robots.txt)
 
@@ -32,7 +32,7 @@ defmodule ElixrReactStarterWeb.Endpoint do
     socket "/phoenix/live_reload/socket", Phoenix.LiveReloader.Socket
     plug Phoenix.LiveReloader
     plug Phoenix.CodeReloader
-    plug Phoenix.Ecto.CheckRepoStatus, otp_app: :elixr_react_starter
+    plug Phoenix.Ecto.CheckRepoStatus, otp_app: :phoenix_react_starter
   end
 
   plug Phoenix.LiveDashboard.RequestLogger,
@@ -50,5 +50,5 @@ defmodule ElixrReactStarterWeb.Endpoint do
   plug Plug.MethodOverride
   plug Plug.Head
   plug Plug.Session, @session_options
-  plug ElixrReactStarterWeb.Router
+  plug PhoenixReactStarterWeb.Router
 end

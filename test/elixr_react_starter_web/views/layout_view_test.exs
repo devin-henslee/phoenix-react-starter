@@ -1,5 +1,5 @@
-defmodule ElixrReactStarterWeb.LayoutViewTest do
-  use ElixrReactStarterWeb.ConnCase, async: true
+defmodule PhoenixReactStarterWeb.LayoutViewTest do
+  use PhoenixReactStarterWeb.ConnCase, async: true
 
   # When testing helpers, you may want to import Phoenix.HTML and
   # use functions such as safe_to_string() to convert the helper

@@ -1,6 +1,6 @@
-defmodule ElixrReactStarter do
+defmodule PhoenixReactStarter do
   @moduledoc """
-  ElixrReactStarter keeps the contexts that define your domain
+  PhoenixReactStarter keeps the contexts that define your domain
   and business logic.
 
   Contexts are also responsible for managing your data, regardless
